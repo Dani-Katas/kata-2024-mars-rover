@@ -24,6 +24,8 @@ public enum Direction {
   public Direction rotateLeft() {
     if (this == WEST) {
       return SOUTH;
+    } else if(this == SOUTH) {
+      return EAST;
     }
 
     return WEST;

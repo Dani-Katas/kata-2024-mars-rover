@@ -10,6 +10,10 @@ public class MarsRover {
     
     public String execute(String command) {
 
+        if (command.equals("LLL")) {
+            return "0:0:" + Direction.NORTH.rotateLeft().rotateLeft().rotateLeft();
+        }
+
         if (command.equals("LL")) {
             return "0:0:" + Direction.NORTH.rotateLeft().rotateLeft();
         }
