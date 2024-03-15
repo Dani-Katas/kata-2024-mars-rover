@@ -23,14 +23,14 @@ public class MarsRover {
             }
 
             if (c.equals("M")) {
-                this.moveForward();
+                this.moveForwardInYAxis();
             }
         }
         
         return  y + ":0:" + this.direction;
     }
     
-    private void moveForward() {
+    private void moveForwardInYAxis() {
         this.y = y + 1;
     }
     
