@@ -134,6 +134,18 @@ class MarsRoverTest {
 
             assertThat(expectedOutput).isEqualTo(output);
         }
+
+        @Test
+        void advancesTwice() {
+            String command = "MM";
+            String expectedOutput = "2:0:N";
+
+            MarsRover marsRover = new MarsRover(new Grid());
+
+            String output = marsRover.execute(command);
+
+            assertThat(expectedOutput).isEqualTo(output);
+        }
     }
 
 }

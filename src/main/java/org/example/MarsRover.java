@@ -25,6 +25,10 @@ public class MarsRover {
         if (command.equals("M")) {
             return "1:0:" + this.direction;
         }
+
+        if (command.equals("MM")) {
+            return "2:0:" + this.direction;
+        }
         
         return "0:0:" + this.direction;
     }
