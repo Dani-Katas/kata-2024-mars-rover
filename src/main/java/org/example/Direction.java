@@ -3,7 +3,8 @@ package org.example;
 public enum Direction {
   SOUTH,
   NORTH,
-  WEST;
+  WEST,
+  EAST;
 
   @Override
   public String toString() {
@@ -12,6 +13,9 @@ public enum Direction {
     }
     if (this == WEST) {
       return "W";
+    }
+    if (this == EAST) {
+      return "E";
     }
 
     return "Unknown";

@@ -19,7 +19,7 @@ public class MarsRover {
         }
 
         if (command.equals("R")) {
-            return "0:0:E";
+            return "0:0:" + Direction.EAST;
         }
 
         if (command.equals("RR")) {
