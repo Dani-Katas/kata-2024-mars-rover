@@ -8,40 +8,29 @@ public enum Direction {
 
   @Override
   public String toString() {
-    if (this == SOUTH) {
-      return "S";
-    } else if (this == WEST) {
-      return "W";
-    } else if (this == EAST) {
-      return "E";
-    } else if (this == NORTH) {
-      return "N";
-    } else {
-      return "Unknown";
-    }
+      return switch (this) {
+        case NORTH -> "N";
+        case EAST -> "E";
+        case SOUTH -> "S";
+        case WEST -> "W";
+      };
   }
 
   public Direction rotateLeft() {
-    if (this == WEST) {
-      return SOUTH;
-    } else if(this == SOUTH) {
-      return EAST;
-    } else if (this == EAST) {
-      return NORTH;
-    } else {
-      return WEST;
-    }
+      return switch (this) {
+        case NORTH -> WEST;
+        case WEST -> SOUTH;
+        case SOUTH -> EAST;
+        case EAST -> NORTH;
+      };
   }
 
   public Direction rotateRight() {
-    if (this == EAST) {
-      return SOUTH;
-    } else if (this == SOUTH) {
-      return WEST;
-    } else if (this == WEST) {
-      return NORTH;
-    } else {
-      return EAST;
-    }
+      return switch (this) {
+        case NORTH -> EAST;
+        case EAST -> SOUTH;
+        case SOUTH -> WEST;
+        case WEST -> NORTH;
+      };
   }
 }
