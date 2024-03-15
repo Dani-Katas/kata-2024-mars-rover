@@ -31,7 +31,11 @@ public class MarsRover {
     }
     
     private void moveForwardInYAxis() {
-        this.y = y + 1;
+        if (this.direction == Direction.SOUTH) {
+            this.y = y - 1;
+        } else if (this.direction == Direction.NORTH) {
+            this.y = y + 1;
+        }
     }
     
     
