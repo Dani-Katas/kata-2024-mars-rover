@@ -32,4 +32,16 @@ class MarsRoverTest {
         assertThat(expectedOutput).isEqualTo(output);
     }
 
+    @Test
+    void rotatesLeft() {
+        String command = "L";
+        String expectedOutput = "0:0:W";
+
+        MarsRover marsRover = new MarsRover(new Grid());
+
+        String output = marsRover.execute(command);
+
+        assertThat(expectedOutput).isEqualTo(output);
+    }
+
 }
