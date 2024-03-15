@@ -10,14 +10,14 @@ public enum Direction {
   public String toString() {
     if (this == SOUTH) {
       return "S";
-    }
-    if (this == WEST) {
+    } else if (this == WEST) {
       return "W";
-    }
-    if (this == EAST) {
+    } else if (this == EAST) {
       return "E";
+    } else if (this == NORTH) {
+      return "N";
+    } else {
+      return "Unknown";
     }
-
-    return "Unknown";
   }
 }
