@@ -9,32 +9,20 @@ public class MarsRover {
     }
     
     public String execute(String command) {
+        
+        String[] commands = command.split("");
+        
+        for (String c : commands) {
+            if (c.equals("L")) {
+                direction = direction.rotateLeft();
+            }
 
-        if (command.equals("LLL")) {
-            return "0:0:" + Direction.NORTH.rotateLeft().rotateLeft().rotateLeft();
-        }
-
-        if (command.equals("LL")) {
-            return "0:0:" + Direction.NORTH.rotateLeft().rotateLeft();
-        }
-
-        if (command.equals("L")) {
-            return "0:0:" + Direction.NORTH.rotateLeft();
-        }
-
-        if (command.equals("R")) {
-            return "0:0:" + Direction.NORTH.rotateRight();
-        }
-
-        if (command.equals("RR")) {
-            return "0:0:" + Direction.NORTH.rotateRight().rotateRight();
-        }
-
-        if (command.equals("RRR")) {
-            return "0:0:" + Direction.NORTH.rotateRight().rotateRight().rotateRight();
+            if (c.equals("R")) {
+                direction = direction.rotateRight();
+            }
         }
         
-        return "0:0:" + Direction.NORTH;
+        return "0:0:" + this.direction;
     }
     
     
