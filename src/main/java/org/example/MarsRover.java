@@ -15,7 +15,7 @@ public class MarsRover {
         }
 
         if (command.equals("L")) {
-            return "0:0:W";
+            return "0:0:" + Direction.WEST;
         }
 
         if (command.equals("R")) {
