@@ -32,7 +32,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void rotatesLeftTwice() {
+    void turnsAroundToTheLeft() {
         String command = "LL";
         String expectedOutput = "0:0:S";
 
@@ -56,7 +56,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void rotatesRightTwice() {
+    void turnsAroundToTheRight() {
         String command = "RR";
         String expectedOutput = "0:0:S";
 
