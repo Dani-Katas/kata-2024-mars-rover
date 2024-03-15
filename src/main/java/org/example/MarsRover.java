@@ -39,6 +39,8 @@ public class MarsRover {
             this.y = y + 1;
         } else if (this.direction == Direction.WEST) {
             this.x = x - 1;
+        } else if (this.direction == Direction.EAST) {
+            this.x = x + 1;
         }
     }
     
