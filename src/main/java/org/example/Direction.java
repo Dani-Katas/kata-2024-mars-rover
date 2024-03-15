@@ -20,4 +20,20 @@ public enum Direction {
       return "Unknown";
     }
   }
+
+  public Direction rotateLeft() {
+    if (this == WEST) {
+      return SOUTH;
+    }
+
+    return WEST;
+  }
+
+  public Direction rotateRight() {
+    if (this == EAST) {
+      return SOUTH;
+    }
+
+    return EAST;
+  }
 }
