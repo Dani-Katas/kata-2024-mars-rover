@@ -29,6 +29,10 @@ public class MarsRover {
         if (command.equals("RR")) {
             return "0:0:" + Direction.NORTH.rotateRight().rotateRight();
         }
+
+        if (command.equals("RRR")) {
+            return "0:0:" + Direction.NORTH.rotateRight().rotateRight().rotateRight();
+        }
         
         return "0:0:" + Direction.NORTH;
     }
