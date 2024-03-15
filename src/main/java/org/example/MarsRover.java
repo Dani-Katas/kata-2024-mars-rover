@@ -5,6 +5,8 @@ public class MarsRover {
     Direction direction = Direction.NORTH;
 
     int y = 0;
+    
+    int x = 0;
 
     public MarsRover(Grid grid) {
     }
@@ -23,18 +25,20 @@ public class MarsRover {
             }
 
             if (c.equals("M")) {
-                this.moveForwardInYAxis();
+                this.moveForward();
             }
         }
         
-        return  y + ":0:" + this.direction;
+        return  y + ":" + x + ":" + this.direction;
     }
     
-    private void moveForwardInYAxis() {
+    private void moveForward() {
         if (this.direction == Direction.SOUTH) {
             this.y = y - 1;
         } else if (this.direction == Direction.NORTH) {
             this.y = y + 1;
+        } else if (this.direction == Direction.WEST) {
+            this.x = x - 1;
         }
     }
     

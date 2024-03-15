@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MarsRoverTest {
 
@@ -18,7 +17,7 @@ class MarsRoverTest {
 
         String output = marsRover.execute(command);
 
-        assertThat(expectedOutput).isEqualTo(output);
+        assertThat(output).isEqualTo(expectedOutput);
     }
 
     @Nested
@@ -32,7 +31,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -44,7 +43,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -56,7 +55,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -68,7 +67,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -80,7 +79,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -92,7 +91,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -104,7 +103,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -116,7 +115,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
     }
 
@@ -132,7 +131,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
 
         @Test
@@ -144,7 +143,7 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
         }
         
         @Test
@@ -156,7 +155,19 @@ class MarsRoverTest {
 
             String output = marsRover.execute(command);
 
-            assertThat(expectedOutput).isEqualTo(output);
+            assertThat(output).isEqualTo(expectedOutput);
+        }
+        
+        @Test
+        void movesHorizontallyToTheLeft() {
+            String command = "LM";
+            String expectedOutput = "0:-1:W";
+
+            MarsRover marsRover = new MarsRover(new Grid());
+
+            String output = marsRover.execute(command);
+
+            assertThat(output).isEqualTo(expectedOutput);
         }
     }
 
