@@ -7,6 +7,8 @@ public class MarsRover {
     int y = 0;
     
     int x = 0;
+    
+    Coordinates coordinates = Coordinates.origin();
 
     public MarsRover(Grid grid) {
     }
@@ -35,6 +37,7 @@ public class MarsRover {
     private void moveForward() {
         if (this.direction == Direction.SOUTH) {
             this.y = y - 1;
+            this.coordinates = this.coordinates.setY(-1);
         } else if (this.direction == Direction.NORTH) {
             this.y = y + 1;
         } else if (this.direction == Direction.WEST) {
