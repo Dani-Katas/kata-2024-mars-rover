@@ -120,4 +120,20 @@ class MarsRoverTest {
         }
     }
 
+    @Nested
+    class MovementTest {
+
+        @Test
+        void advancesOnce() {
+            String command = "M";
+            String expectedOutput = "1:0:N";
+
+            MarsRover marsRover = new MarsRover(new Grid());
+
+            String output = marsRover.execute(command);
+
+            assertThat(expectedOutput).isEqualTo(output);
+        }
+    }
+
 }
